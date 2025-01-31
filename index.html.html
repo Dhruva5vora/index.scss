@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurtas</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #F5EFE6;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        header {
+            
+            color: #FFF0F5;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        header .logo img {
+            width: 320px;
+            height: auto;
+        }
+
+
+        header nav {
+            display: flex;
+            justify-content: center;
+            background-color: #F5F5DC;
+            padding: 0.5rem 0;
+            width: 100%;
+        }
+
+
+        header nav a {
+            color: #774936;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            margin: 0 1rem;
+        }
+
+
+        header nav a:hover {
+            color: #e668afd7;
+        }
+
+
+        .explore-section,
+        .about-section {
+            padding: 2rem;
+            text-align: center;
+        }
+
+
+        .explore-section h2,
+        .about-section h2 {
+            font-size: 2.5rem;
+            color: #774936;
+            margin-bottom: 1rem;
+        }
+
+
+        .explore-section p,
+        .about-section p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #4f3a3c;
+            max-width: 800px;
+            margin: auto;
+        }
+
+
+        /* Product Section */
+        .product-section {
+            text-align: center;
+            padding: 2rem;
+        }
+
+
+        .product-container {
+            display: flex;
+            flex-direction: column; /* Stacks products vertically */
+            align-items: center;
+            gap: 30px;
+            padding: 2rem;
+        }
+
+
+        .product-heading {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #774936;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+
+        .product-card {
+            position: relative; /* Needed to position the heart inside the product card */
+            background: #fff;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            width: 280px;
+        }
+
+
+        .product-card img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            cursor: pointer; /* Indicating image is clickable */
+        }
+
+
+        .product-card img:hover {
+            transform: scale(1.1); /* Pop effect only on image hover */
+        }
+
+
+        .product-card p {
+            font-size: 1rem;
+            color: #4f3a3c;
+        }
+
+
+        .product-card button {
+            background-color: #774936;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+
+
+        .product-card button:hover {
+            background-color: #4f3a3c;
+        }
+        /* Heart Icon */
+        .heart-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #d3d3d3; /* Initial color */
+            transition: color 0.3s ease;
+        }
+
+
+        .heart-icon.added {
+            color: red; /* Turns red when clicked */
+        }
+
+
+        /* Footer */
+        footer {
+            background-color: #4f3a3c;
+            color: #fff;
+            padding: 2rem;
+            text-align: center;
+        }
+
+
+        .footer-links {
+            margin-top: 1rem;
+        }
+
+
+        .footer-links a {
+            color: #f8c3bf;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1rem;
+        }
+
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://i.postimg.cc/63RDFQ85/Untitled-Project-processed.png" alt="Adaa Jaipur Logo">
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#">Kurtas</a>
+            <a href="#">Kurtas Sets</a>
+            <a href="#">Gowns</a>
+            <a href="#">Bottoms</a>
+            <a href="#">Tops</a>
+            <a href="#about">About Us</a>
+            <a href="#footer">Contact Us</a>
+        </nav>
+    </header>
+
+
+    <div class="explore-section">
+        <h2>Gowns</h2>
+        <p>Explore our prettiest collection of gowns!</p>
+    </div>
+
+
+    <div class="product-section">
+        <div class="product-container">
+
+
+            <div>
+                <h3 class="product-heading">Ankle length</h3>
+                <div class="product-card">
+                    <div class="heart-icon" onclick="toggleWishlist(this)">♥</div>
+                    <img src="https://i.postimg.cc/Y05m0pyK/IMG-20250128-214506.jpg" alt="A-line Kurta">
+                    <p>Green ankle length gown with belt & embroidery</p>
+                    <p><del>₹2,999</del> ₹2,350</p>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+
+
+            <div>
+                <h3 class="product-heading">Festive Gowns</h3>
+                <div class="product-card">
+                    <div class="heart-icon" onclick="toggleWishlist(this)">♥</div>
+                    <img src="https://i.postimg.cc/L5pqLHMz/IMG-20250128-214548.jpg" alt="Embroidery Kurta">
+                    <p>Long green gown malmal dupatta & sequence work</p>
+                    <p><del>₹2,499</del> ₹1,999</p>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+
+
+            <div>
+                <h3 class="product-heading">Gowns with dupatta</h3>
+                <div class="product-card">
+                    <div class="heart-icon" onclick="toggleWishlist(this)">♥</div> 
+                    <img src="https://i.postimg.cc/4NnKc2D2/IMG-20250128-214617.jpg" alt="Straight Line Kurta">
+                    <p>Teal gown with chinon dupatta & lace work</p>
+                    <p><del>₹2,899</del> ₹2,299</p>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <footer id="footer">
+        <p>© 2025 Adaa Jaipur. All Rights Reserved.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Terms of Service</a> |
+            <a href="#">Returns & Exchange</a>
+        </div>
+        <div class="footer-links">
+            <a href="https://www.instagram.com/" target="_blank">Instagram</a> |
+            <a href="https://www.facebook.com/" target="_blank">Facebook</a> |
+            <a href="https://www.twitter.com/" target="_blank">Twitter</a>
+        </div>
+        <p>Contact us: <a href="mailto:support@adaajaipur.com" style="color:#f8c3bf;">support@adaajaipur.com</a></p>
+    </footer>
+
+
+    <script>
+        function toggleWishlist(heartElement) {
+            // Toggle the 'added' class on the heart icon
+            heartElement.classList.toggle('added');
+
+
+            // Additional functionality like adding to a real wishlist can go here
+            if (heartElement.classList.contains('added')) {
+                console.log("Added to wishlist!");
+                // Here you can add the logic to save the product to a wishlist (e.g., localStorage)
+            } else {
+                console.log("Removed from wishlist!");
+                // Logic to remove the product from the wishlist (if needed)
+            }
+        }
+    </script>
+</body>
+
+
+</html>
+
